@@ -97,6 +97,26 @@ public class Chat_bot {
 				 p+=s + " ";
 				 System.out.print(s+ " ");
 			 }
+			 /*
+				if(input.contains("i"))
+				{
+					input = input.replace("i", replacementMap.get("i"));
+				}
+			    if(input.contains("me"))
+				{
+					input = input.replace("me", replacementMap.get("me"));
+				}
+				if(input.contains("my"))
+				{
+					input = input.replace("my", replacementMap.get("my"));
+				}
+				if(input.contains("am"))
+				{
+					input = input.replace("am", replacementMap.get("am"));
+				}
+				
+				System.out.print(input);
+				*/
 	     }
 		return selected +" "+p;
 	}
@@ -125,7 +145,7 @@ public class Chat_bot {
 		int keep_track = 0;
 		
 		
-		while(!input.equals("Quit"))
+		while(true)
 		{
 			input = scn.nextLine();		
 			if(input.equals("Quit"))
@@ -142,30 +162,7 @@ public class Chat_bot {
 			else if(keep_track%2==0)
 			{
 				int index = rand.nextInt(qualifierSet.size());
-				file_s.add(qualifier(qualifierSet,replacementMap,input,index));
-				 
-				 /*
-				if(input.contains("i"))
-				{
-					input = input.replace("i", replacementMap.get("i"));
-				}
-			    if(input.contains("me"))
-				{
-					input = input.replace("me", replacementMap.get("me"));
-				}
-				if(input.contains("my"))
-				{
-					input = input.replace("my", replacementMap.get("my"));
-				}
-				if(input.contains("am"))
-				{
-					input = input.replace("am", replacementMap.get("am"));
-				}
-				
-				System.out.print(input);
-				*/
-				 
-				 
+				file_s.add(qualifier(qualifierSet,replacementMap,input,index));	 
 			}
 			
 			
